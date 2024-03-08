@@ -29,9 +29,7 @@ export const colors: PikminColor[] = [
 const stickerValues = "\xa0".split("");
 
 const allCollectionViews = [
-  CollectionView.Simple,
   CollectionView.Mitchell,
-  CollectionView.Exhaustive,
 ];
 
 /**
@@ -91,7 +89,7 @@ const createRoadsideColorDecors = (): Decor[] =>
       title: `Roadside Decor Pikmin with ${roadsideColor.toUpperCase()} sticker:}`,
       description: `Roadside Decor Pikmin with ${roadsideColor.toUpperCase()} sticker:}`,
       colors,
-      views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+      views: [CollectionView.Mitchell],
       roadsideColor,
     })
   );
@@ -116,7 +114,7 @@ export const decors: Decor[] = [
     title: decorTitle("Restaurant (Shiny)"),
     description: "Rare shiny variation for the Restaurant decor",
     type: DecorType.Special,
-    views: [CollectionView.Mitchell, CollectionView.Exhaustive],
+    views: [CollectionView.Mitchell],
   },
   createLocationDecor("cafe"),
   createLocationDecor("sweetshop", {
@@ -182,19 +180,19 @@ export const decors: Decor[] = [
     title: "Rainy Day",
     icon: "weather",
     colors: [PikminColor.Blue],
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [, CollectionView.Mitchell],
   }),
   createLocationDecor("weather-3", {
     title: "Rainy Day",
     icon: "weather",
     colors: [PikminColor.Blue],
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [, CollectionView.Mitchell],
   }),
   createLocationDecor("weather-snowy-day", {
     title: "Snowy Day",
     icon: "weather",
     colors: [PikminColor.Blue],
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [, CollectionView.Mitchell],
   }),
   createLocationDecor("themepark-1", {
     title: decorTitle("Theme Park"),
@@ -205,7 +203,7 @@ export const decors: Decor[] = [
     title: decorTitle("Theme Park (alternative design)"),
     icon: "themepark",
     colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue],
-    views: [CollectionView.Mitchell, CollectionView.Exhaustive],
+    views: [CollectionView.Mitchell, ],
   }),
   createLocationDecor("bus-stop"),
   createLocationDecor("italian-restaurant"),
@@ -227,31 +225,31 @@ export const decors: Decor[] = [
     title: "Appliances Store: Battery 2",
     icon: "appliances-store",
     colors: [PikminColor.Yellow],
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [, CollectionView.Mitchell],
   }),
   createLocationDecor("appliances-store-battery-3", {
     title: "Appliances Store: Battery 3",
     icon: "appliances-store",
     colors: [PikminColor.Yellow],
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [, CollectionView.Mitchell],
   }),
   createLocationDecor("appliances-store-battery-4", {
     title: "Appliances Store: Battery 4",
     icon: "appliances-store",
     colors: [PikminColor.Yellow],
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [, CollectionView.Mitchell],
   }),
   createLocationDecor("appliances-store-battery-5", {
     title: "Appliances Store: Battery 5",
     icon: "appliances-store",
     colors: [PikminColor.Yellow],
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [, CollectionView.Mitchell],
   }),
   createLocationDecor("appliances-store-battery-6", {
     title: "Appliances Store: Battery 6",
     icon: "appliances-store",
     colors: [PikminColor.Yellow],
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [, CollectionView.Mitchell],
   }),
   createLocationDecor("appliances-store-fairy-lights-1", {
     title: "Appliances Store: Fairy Lights",
@@ -262,7 +260,7 @@ export const decors: Decor[] = [
     title: "Appliances Store: Fairy Lights 2",
     icon: "appliances-store",
     colors: [PikminColor.Yellow],
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [, CollectionView.Mitchell],
   }),
 
   // Special Decor Pikmin which are custom in every aspect.
@@ -348,7 +346,7 @@ export const decors: Decor[] = [
     description:
       "2023 Design #2.",
     type: DecorType.Special,
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [, CollectionView.Mitchell],
   },
   {
     key: "special-flower-card-2023-3",
@@ -363,7 +361,7 @@ export const decors: Decor[] = [
     description:
       "2023 Design #3.",
     type: DecorType.Special,
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [, CollectionView.Mitchell],
   },
   {
     key: "special-flower-card-2023-4",
@@ -378,7 +376,7 @@ export const decors: Decor[] = [
     description:
       "2023 Design #4.",
     type: DecorType.Special,
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [, CollectionView.Mitchell],
   },
   {
     key: "special-flower-card-2023-5",
@@ -393,7 +391,7 @@ export const decors: Decor[] = [
     description:
       "2023 Design #5.",
     type: DecorType.Special,
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [, CollectionView.Mitchell],
   },
   {
     key: "special-flower-card-2023-6",
@@ -408,7 +406,7 @@ export const decors: Decor[] = [
     description:
       "2023 Design #6.",
     type: DecorType.Special,
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [, CollectionView.Mitchell],
   },
   {
     key: "special-flower-card-2024-1",
@@ -418,7 +416,7 @@ export const decors: Decor[] = [
     description:
       "2024 Design #1.",
     type: DecorType.Special,
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [, CollectionView.Mitchell],
   },
   {
     key: "special-flower-card-2024-2",
@@ -428,7 +426,7 @@ export const decors: Decor[] = [
     description:
       "2024 Design #2.",
     type: DecorType.Special,
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [, CollectionView.Mitchell],
   },
   {
     key: "special-halloween",
@@ -593,7 +591,7 @@ export const decors: Decor[] = [
     title: "Fortune (Very Lucky)",
     description: "Exclusive to Japan",
     type: DecorType.Special,
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [, CollectionView.Mitchell],
   },
   {
     key: "special-fortune-2",
@@ -611,7 +609,7 @@ export const decors: Decor[] = [
     title: "Fortune (Pretty Lucky)",
     description: "Exclusive to Japan",
     type: DecorType.Special,
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [, CollectionView.Mitchell],
   },
   {
     key: "special-fortune-4",
@@ -620,7 +618,7 @@ export const decors: Decor[] = [
     title: "Fortune (A Little Lucky)",
     description: "Exclusive to Japan",
     type: DecorType.Special,
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [, CollectionView.Mitchell],
   },
   {
     key: "special-fortune-5",
@@ -629,7 +627,7 @@ export const decors: Decor[] = [
     title: "Fortune (Future Luck)",
     description: "Exclusive to Japan",
     type: DecorType.Special,
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [, CollectionView.Mitchell],
   },
 
   // Mitchell/Exhaustive Specials
@@ -640,7 +638,7 @@ export const decors: Decor[] = [
     description:
       "Any Roadside-type Pikmin grown from a seedling that was discovered between December 21st, 2021 to January 11th, 2022 will instead have a Holidays-themed sticker. These stickers are bigger than the regular sticker, with each Pikmin type having a different design.",
     type: DecorType.Special,
-    views: [CollectionView.Mitchell, CollectionView.Exhaustive],
+    views: [CollectionView.Mitchell, ],
   },
   {
     key: "special-roadside-coin",
@@ -649,7 +647,7 @@ export const decors: Decor[] = [
     description:
       "These Pikmin only have 1 type per Pikmin, unlike the sticker type, and the coins present on the Pikmin are from all around the world.",
     type: DecorType.Special,
-    views: [CollectionView.Mitchell, CollectionView.Exhaustive],
+    views: [CollectionView.Mitchell, ],
   },
 
   // Roadside decors for display in Mitchell view only

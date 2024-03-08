@@ -3,6 +3,8 @@ const withPWA = require("next-pwa")({
 });
 
 module.exports = withPWA({
+  basePath: '/pikmin-bloom-checklist',
+  assetPrefix: '/pikmin-bloom-checklist/',
   reactStrictMode: true,
   images: {
     loader: "custom",
