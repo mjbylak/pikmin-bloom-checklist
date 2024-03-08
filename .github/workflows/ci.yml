@@ -20,6 +20,6 @@ jobs:
         run: npm run build
       - name: Deploy
         if: github.ref == 'refs/heads/main'
-        uses: mjbylak/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: build
