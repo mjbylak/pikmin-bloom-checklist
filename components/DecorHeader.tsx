@@ -20,7 +20,6 @@ export const DecorHeader: React.FC<DecorHeaderProps> = ({ decor }) => {
           data-tip={tooltip}
           className={`sticker ${decor.roadsideColor ?? ""}`}
         >
-          {decor.key.split("-")[1].toUpperCase()}
         </span>
       </>
     );

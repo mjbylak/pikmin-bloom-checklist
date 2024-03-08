@@ -31,9 +31,7 @@ export interface DecorColorPair {
 }
 
 export enum CollectionView {
-  Simple = "simple",
-  Advanced = "advanced",
-  Exhaustive = "exhaustive",
+  Mitchell = "mitchell",
 }
 
 export enum DecorType {

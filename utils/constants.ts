@@ -26,11 +26,11 @@ export const colors: PikminColor[] = [
  * Characters that can appear on a roadside Pikmin sticker.
  * 36 individual characters
  */
-const stickerValues = "abcdefghijklmnopqrstuvwxyz0123456789".split("");
+const stickerValues = "\xa0".split("");
 
 const allCollectionViews = [
   CollectionView.Simple,
-  CollectionView.Advanced,
+  CollectionView.Mitchell,
   CollectionView.Exhaustive,
 ];
 
@@ -65,32 +65,35 @@ const createLocationDecor = (
 });
 
 /**
- * Alphanumeric roadside stickers shown in the Advanced view.
+ * Alphanumeric roadside stickers shown in the Mitchell view.
  * Generates 36 entries
  */
 const createRoadsideDecors = (): Decor[] =>
   stickerValues.map((character) => ({
     key: `alpha-${character}`,
+    icon: "",
     type: DecorType.Roadside,
     title: `Roadside Decor Pikmin with sticker: ${character.toUpperCase()}`,
+    description: `Roadside Decor Pikmin with ${character.toUpperCase()} sticker:}`,
     colors,
-    views: [CollectionView.Advanced],
+    views: [],
   }));
 
 /**
  * Alphanumeric roadside stickers tracking individual colors; shown in the Exhaustive view.
- * Generates 108 entries
+ * Generates 21 entries
  */
 const createRoadsideColorDecors = (): Decor[] =>
-  stickerValues.flatMap<Decor>((character) =>
     roadsideStickerColors.map((roadsideColor) => ({
-      key: `alpha-${character}-${roadsideColor}`,
+      key: `alpha-${roadsideColor}`,
+      icon: "",
       type: DecorType.Roadside,
-      title: `Roadside Decor Pikmin with ${roadsideColor} sticker: ${character.toUpperCase()}`,
+      title: `Roadside Decor Pikmin with ${roadsideColor.toUpperCase()} sticker:}`,
+      description: `Roadside Decor Pikmin with ${roadsideColor.toUpperCase()} sticker:}`,
       colors,
-      views: [CollectionView.Exhaustive],
+      views: [CollectionView.Exhaustive, CollectionView.Mitchell],
       roadsideColor,
-    }))
+    })
   );
 
 /**
@@ -113,7 +116,7 @@ export const decors: Decor[] = [
     title: decorTitle("Restaurant (Shiny)"),
     description: "Rare shiny variation for the Restaurant decor",
     type: DecorType.Special,
-    views: [CollectionView.Advanced, CollectionView.Exhaustive],
+    views: [CollectionView.Mitchell, CollectionView.Exhaustive],
   },
   createLocationDecor("cafe"),
   createLocationDecor("sweetshop", {
@@ -163,7 +166,6 @@ export const decors: Decor[] = [
       "This Decor is an extremely rare variation of the regular Clover decor, which shows up more often on St. Patrick's day in Special Event Huge Seedlings.",
   }),
   createLocationDecor("library"),
-  createLocationDecor("roadside"),
   createLocationDecor("sushi"),
   createLocationDecor("mountain", {
     colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue],
@@ -172,25 +174,27 @@ export const decors: Decor[] = [
     colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue],
   }),
   createLocationDecor("weather-1", {
-    title: "Weather",
+    title: "Rainy Day",
     icon: "weather",
     colors: [PikminColor.Blue],
   }),
   createLocationDecor("weather-2", {
+    title: "Rainy Day",
     icon: "weather",
     colors: [PikminColor.Blue],
-    views: [CollectionView.Exhaustive],
+    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
   }),
   createLocationDecor("weather-3", {
+    title: "Rainy Day",
     icon: "weather",
     colors: [PikminColor.Blue],
-    views: [CollectionView.Exhaustive],
+    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
   }),
   createLocationDecor("weather-snowy-day", {
-    title: "Weather: Snowy Day",
+    title: "Snowy Day",
     icon: "weather",
     colors: [PikminColor.Blue],
-    views: [CollectionView.Exhaustive],
+    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
   }),
   createLocationDecor("themepark-1", {
     title: decorTitle("Theme Park"),
@@ -201,12 +205,12 @@ export const decors: Decor[] = [
     title: decorTitle("Theme Park (alternative design)"),
     icon: "themepark",
     colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue],
-    views: [CollectionView.Advanced, CollectionView.Exhaustive],
+    views: [CollectionView.Mitchell, CollectionView.Exhaustive],
   }),
   createLocationDecor("bus-stop"),
   createLocationDecor("italian-restaurant"),
   createLocationDecor("ramen-restaurant", {
-    colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue],
+    colors: colors,
   }),
   createLocationDecor("bridge", {
     colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue],
@@ -223,31 +227,31 @@ export const decors: Decor[] = [
     title: "Appliances Store: Battery 2",
     icon: "appliances-store",
     colors: [PikminColor.Yellow],
-    views: [CollectionView.Exhaustive],
+    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
   }),
   createLocationDecor("appliances-store-battery-3", {
     title: "Appliances Store: Battery 3",
     icon: "appliances-store",
     colors: [PikminColor.Yellow],
-    views: [CollectionView.Exhaustive],
+    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
   }),
   createLocationDecor("appliances-store-battery-4", {
     title: "Appliances Store: Battery 4",
     icon: "appliances-store",
     colors: [PikminColor.Yellow],
-    views: [CollectionView.Exhaustive],
+    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
   }),
   createLocationDecor("appliances-store-battery-5", {
     title: "Appliances Store: Battery 5",
     icon: "appliances-store",
     colors: [PikminColor.Yellow],
-    views: [CollectionView.Exhaustive],
+    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
   }),
   createLocationDecor("appliances-store-battery-6", {
     title: "Appliances Store: Battery 6",
     icon: "appliances-store",
     colors: [PikminColor.Yellow],
-    views: [CollectionView.Exhaustive],
+    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
   }),
   createLocationDecor("appliances-store-fairy-lights-1", {
     title: "Appliances Store: Fairy Lights",
@@ -258,7 +262,7 @@ export const decors: Decor[] = [
     title: "Appliances Store: Fairy Lights 2",
     icon: "appliances-store",
     colors: [PikminColor.Yellow],
-    views: [CollectionView.Exhaustive],
+    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
   }),
 
   // Special Decor Pikmin which are custom in every aspect.
@@ -272,20 +276,20 @@ export const decors: Decor[] = [
     views: allCollectionViews,
   },
   {
-    key: "special-lunar-new-year",
-    colors: [PikminColor.Blue, PikminColor.Yellow, PikminColor.Red],
-    title: "Lunar New Year",
+    key: "special-lunar-new-year-red",
+    colors,
+    title: "Lunar New Year Red",
     description:
-      "On February 1st, 2022, and again in 2023, to coincide with the Lunar New Year event, a new type of special Decor Pikmin was made obtainable for a limited time. These Decor Pikmin wear red decorations with gold patterns.",
+      "These Pikmin wear red decorations with gold patterns.",
     type: DecorType.Special,
     views: allCollectionViews,
   },
   {
-    key: "special-lunar-new-year-2023",
-    colors: [PikminColor.Blue, PikminColor.Yellow, PikminColor.Red],
-    title: "Lunar New Year 2023",
+    key: "special-lunar-new-year-gold",
+    colors,
+    title: "Lunar New Year Gold",
     description:
-      "On January 21st, 2023, to coincide with the Lunar New Year event, a new type of special Decor Pikmin was made obtainable for a limited time. These Decor Pikmin wear gold decorations with red patterns.",
+      "These Pikmin wear gold decorations with red patterns.",
     type: DecorType.Special,
     views: allCollectionViews,
   },
@@ -317,7 +321,7 @@ export const decors: Decor[] = [
     views: allCollectionViews,
   },
   {
-    key: "special-flower-card",
+    key: "special-flower-card-2023",
     icon: "special-flower-card",
     colors: [
       PikminColor.Red,
@@ -327,12 +331,12 @@ export const decors: Decor[] = [
     ],
     title: "Flower card",
     description:
-      "Available in September 2022 and again in September 2023. 6 different Flower Card designs per Pikmin.",
+      "2023 Design #1.",
     type: DecorType.Special,
     views: allCollectionViews,
   },
   {
-    key: "special-flower-card-2",
+    key: "special-flower-card-2023-2",
     icon: "special-flower-card",
     colors: [
       PikminColor.Red,
@@ -342,12 +346,12 @@ export const decors: Decor[] = [
     ],
     title: "Flower card",
     description:
-      "Design #2. Available in September 2022 and again in September 2023. 6 different Flower Card designs per Pikmin.",
+      "2023 Design #2.",
     type: DecorType.Special,
-    views: [CollectionView.Exhaustive],
+    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
   },
   {
-    key: "special-flower-card-3",
+    key: "special-flower-card-2023-3",
     icon: "special-flower-card",
     colors: [
       PikminColor.Red,
@@ -357,12 +361,12 @@ export const decors: Decor[] = [
     ],
     title: "Flower card",
     description:
-      "Design #3. Available in September 2022 and again in September 2023. 6 different Flower Card designs per Pikmin.",
+      "2023 Design #3.",
     type: DecorType.Special,
-    views: [CollectionView.Exhaustive],
+    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
   },
   {
-    key: "special-flower-card-4",
+    key: "special-flower-card-2023-4",
     icon: "special-flower-card",
     colors: [
       PikminColor.Red,
@@ -372,12 +376,12 @@ export const decors: Decor[] = [
     ],
     title: "Flower card",
     description:
-      "Design #4. Available in September 2022 and again in September 2023. 6 different Flower Card designs per Pikmin.",
+      "2023 Design #4.",
     type: DecorType.Special,
-    views: [CollectionView.Exhaustive],
+    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
   },
   {
-    key: "special-flower-card-5",
+    key: "special-flower-card-2023-5",
     icon: "special-flower-card",
     colors: [
       PikminColor.Red,
@@ -387,12 +391,12 @@ export const decors: Decor[] = [
     ],
     title: "Flower card",
     description:
-      "Design #5. Available in September 2022 and again in September 2023. 6 different Flower Card designs per Pikmin.",
+      "2023 Design #5.",
     type: DecorType.Special,
-    views: [CollectionView.Exhaustive],
+    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
   },
   {
-    key: "special-flower-card-6",
+    key: "special-flower-card-2023-6",
     icon: "special-flower-card",
     colors: [
       PikminColor.Red,
@@ -402,9 +406,29 @@ export const decors: Decor[] = [
     ],
     title: "Flower card",
     description:
-      "Design #6. Available in September 2022 and again in September 2023. 6 different Flower Card designs per Pikmin.",
+      "2023 Design #6.",
     type: DecorType.Special,
-    views: [CollectionView.Exhaustive],
+    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+  },
+  {
+    key: "special-flower-card-2024-1",
+    icon: "special-flower-card",
+    colors: colors,
+    title: "Flower card",
+    description:
+      "2024 Design #1.",
+    type: DecorType.Special,
+    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+  },
+  {
+    key: "special-flower-card-2024-2",
+    icon: "special-flower-card",
+    colors: colors,
+    title: "Flower card",
+    description:
+      "2024 Design #2.",
+    type: DecorType.Special,
+    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
   },
   {
     key: "special-halloween",
@@ -472,7 +496,7 @@ export const decors: Decor[] = [
     colors,
     title: "Present Sticker",
     description:
-      "February 6th 2023 to February 26th 2023. For Valentine's Day 2023, a new type of Decor Pikmin was obtainable for 3 weeks. These decor Pikmin wear pink oversized 'present' stickers.",
+      "For Valentine's Day, a new type of Decor Pikmin was obtainable for 3 weeks. These decor Pikmin wear pink oversized 'present' stickers.",
     type: DecorType.Special,
     views: allCollectionViews,
   },
@@ -569,7 +593,7 @@ export const decors: Decor[] = [
     title: "Fortune (Very Lucky)",
     description: "Exclusive to Japan",
     type: DecorType.Special,
-    views: [CollectionView.Exhaustive],
+    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
   },
   {
     key: "special-fortune-2",
@@ -587,7 +611,7 @@ export const decors: Decor[] = [
     title: "Fortune (Pretty Lucky)",
     description: "Exclusive to Japan",
     type: DecorType.Special,
-    views: [CollectionView.Exhaustive],
+    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
   },
   {
     key: "special-fortune-4",
@@ -596,7 +620,7 @@ export const decors: Decor[] = [
     title: "Fortune (A Little Lucky)",
     description: "Exclusive to Japan",
     type: DecorType.Special,
-    views: [CollectionView.Exhaustive],
+    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
   },
   {
     key: "special-fortune-5",
@@ -605,10 +629,10 @@ export const decors: Decor[] = [
     title: "Fortune (Future Luck)",
     description: "Exclusive to Japan",
     type: DecorType.Special,
-    views: [CollectionView.Exhaustive],
+    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
   },
 
-  // Advanced/Exhaustive Specials
+  // Mitchell/Exhaustive Specials
   {
     key: "special-holiday-stickers",
     colors,
@@ -616,7 +640,7 @@ export const decors: Decor[] = [
     description:
       "Any Roadside-type Pikmin grown from a seedling that was discovered between December 21st, 2021 to January 11th, 2022 will instead have a Holidays-themed sticker. These stickers are bigger than the regular sticker, with each Pikmin type having a different design.",
     type: DecorType.Special,
-    views: [CollectionView.Advanced, CollectionView.Exhaustive],
+    views: [CollectionView.Mitchell, CollectionView.Exhaustive],
   },
   {
     key: "special-roadside-coin",
@@ -625,10 +649,10 @@ export const decors: Decor[] = [
     description:
       "These Pikmin only have 1 type per Pikmin, unlike the sticker type, and the coins present on the Pikmin are from all around the world.",
     type: DecorType.Special,
-    views: [CollectionView.Advanced, CollectionView.Exhaustive],
+    views: [CollectionView.Mitchell, CollectionView.Exhaustive],
   },
 
-  // Roadside decors for display in Advanced view only
+  // Roadside decors for display in Mitchell view only
   ...createRoadsideDecors(),
 
   // Detailed Roadside decors for display in Exhaustive view only
@@ -803,4 +827,5 @@ export const attributions: Attribution[] = [
     text: "Blessing icons created by Eucalyp - Flaticon",
     title: "blessing icons",
   },
+
 ];

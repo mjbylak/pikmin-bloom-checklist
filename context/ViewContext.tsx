@@ -9,7 +9,7 @@ export interface ViewContextValue {
 }
 
 export const ViewContext = React.createContext<ViewContextValue>({
-  view: CollectionView.Simple,
+  view: CollectionView.Mitchell,
   setView: () => {},
 });
 
@@ -21,7 +21,7 @@ export const ViewContextProvider: React.FC<PropsWithChildren> = ({
   children,
 }) => {
   const [view, setInternalView] = React.useState<CollectionView>(
-    CollectionView.Advanced,
+    CollectionView.Mitchell,
   );
   React.useEffect(() => {
     const storedView = localStorage.getItem(storageKey) as CollectionView;

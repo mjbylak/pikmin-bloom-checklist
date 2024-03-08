@@ -44,7 +44,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Support 0-9 for roadside stickers
 - Support seasonal & special decor: Nintendo Account, Roadside Winter Stickers, Lunar New Year ([#3](https://github.com/Notuom/pikmin-bloom-checklist/issues/3))
-- 3 views which show various levels of detail for decor collections: Simple, Advanced, Exhaustive
+- 3 views which show various levels of detail for decor collections: Simple, Mitchell, Exhaustive
 - Support multiple colors for roadside stickers (exhaustive view) ([#2](https://github.com/Notuom/pikmin-bloom-checklist/issues/2))
 - Proper versioning and error handling for exporting/import collections
 - Informative tooltip when clicking decor icons
