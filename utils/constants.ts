@@ -182,7 +182,7 @@ export const decors: Decor[] = [
     title: "Rainy Day",
     icon: "weather",
     colors: [PikminColor.Blue],
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [CollectionView.Mitchell],
   }),
   createLocationDecor("weather-3", {
     title: "Rainy Day",
@@ -264,7 +264,13 @@ export const decors: Decor[] = [
     colors: [PikminColor.Yellow],
     views: [CollectionView.Exhaustive, CollectionView.Mitchell],
   }),
-
+  createLocationDecor("curry", {
+    title: "Curry",
+    icon: "curry",
+    colors,
+    description: "Indian Resturant Pikmin",
+    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+  }),
   // Special Decor Pikmin which are custom in every aspect.
   {
     key: "special-mario",
@@ -494,9 +500,19 @@ export const decors: Decor[] = [
   {
     key: "special-present-sticker",
     colors,
-    title: "Present Sticker",
+    title: "Valentine Sticker",
     description:
-      "For Valentine's Day, a new type of Decor Pikmin was obtainable for 3 weeks. These decor Pikmin wear pink oversized 'present' stickers.",
+      "For Valentine's Day, these decor Pikmin wear pink oversized 'present' stickers.",
+    type: DecorType.Special,
+    views: allCollectionViews,
+  },
+  {
+    key: "special-present-sticker-reverse",
+    icon: "special-present-sticker",
+    colors: [PikminColor.Blue, PikminColor.Yellow, PikminColor.Red],
+    title: "Reverse Valentine",
+    description:
+      "These decor Pikmin wear blue oversized 'present' stickers.",
     type: DecorType.Special,
     views: allCollectionViews,
   },
@@ -520,7 +536,17 @@ export const decors: Decor[] = [
     colors,
     title: "Easter Egg",
     description:
-      "April 1st 2023 to April 30th 2023. For the Easter event, a new set of Decor Pikmin were obtainable. Those Decor Pikmin wore colored egg shells in celebration of Easter.",
+      "For the Easter event, a new set of Decor Pikmin were obtainable. Those Decor Pikmin wore colored egg shells in celebration of Easter.",
+    type: DecorType.Special,
+    views: allCollectionViews,
+  },
+  {
+    key: "special-bunny-easter-egg",
+    colors,
+    icon: "special-easter-egg",
+    title: "Bunny Easter Egg",
+    description:
+      "For the 2024 Easter event, these Decor Pikmin wear colored egg shells with bunny ears.",
     type: DecorType.Special,
     views: allCollectionViews,
   },
@@ -611,7 +637,7 @@ export const decors: Decor[] = [
     title: "Fortune (Pretty Lucky)",
     description: "Exclusive to Japan",
     type: DecorType.Special,
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [CollectionView.Mitchell],
   },
   {
     key: "special-fortune-4",
@@ -620,7 +646,7 @@ export const decors: Decor[] = [
     title: "Fortune (A Little Lucky)",
     description: "Exclusive to Japan",
     type: DecorType.Special,
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [CollectionView.Mitchell],
   },
   {
     key: "special-fortune-5",
@@ -629,9 +655,8 @@ export const decors: Decor[] = [
     title: "Fortune (Future Luck)",
     description: "Exclusive to Japan",
     type: DecorType.Special,
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [CollectionView.Mitchell],
   },
-
   // Mitchell/Exhaustive Specials
   {
     key: "special-holiday-stickers",
@@ -827,5 +852,10 @@ export const attributions: Attribution[] = [
     text: "Blessing icons created by Eucalyp - Flaticon",
     title: "blessing icons",
   },
+  {
+    link: "https://www.flaticon.com/free-icon/curry_5015283?term=curry&page=1&position=70&origin=search&related_id=5015283",
+    text: "Curry free icon by Smashicons - Flaticon",
+    title: "Curry icons",
+  }
 
 ];
