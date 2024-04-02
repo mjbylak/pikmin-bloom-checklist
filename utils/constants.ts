@@ -192,8 +192,8 @@ export const decors: Decor[] = [
   }),
   createLocationDecor("weather-snowy-day", {
     title: "Snowy Day",
-    icon: "weather",
-    colors: [PikminColor.Blue],
+    icon: "snowy-day",
+    colors: [PikminColor.Blue, PikminColor.White],
     views: [CollectionView.Exhaustive, CollectionView.Mitchell],
   }),
   createLocationDecor("themepark-1", {
