@@ -29,9 +29,8 @@ export const colors: PikminColor[] = [
 const stickerValues = "\xa0".split("");
 
 const allCollectionViews = [
-  CollectionView.Simple,
   CollectionView.Mitchell,
-  CollectionView.Exhaustive,
+  
 ];
 
 /**
@@ -91,7 +90,7 @@ const createRoadsideColorDecors = (): Decor[] =>
       title: `Roadside Decor Pikmin with ${roadsideColor.toUpperCase()} sticker:}`,
       description: `Roadside Decor Pikmin with ${roadsideColor.toUpperCase()} sticker:}`,
       colors,
-      views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+      views: [ CollectionView.Mitchell],
       roadsideColor,
     })
   );
@@ -116,7 +115,7 @@ export const decors: Decor[] = [
     title: decorTitle("Restaurant (Shiny)"),
     description: "Rare shiny variation for the Restaurant decor",
     type: DecorType.Special,
-    views: [CollectionView.Mitchell, CollectionView.Exhaustive],
+    views: [CollectionView.Mitchell],
   },
   createLocationDecor("cafe"),
   createLocationDecor("sweetshop", {
@@ -163,7 +162,7 @@ export const decors: Decor[] = [
   createLocationDecor("park-four-leaf-clover", {
     title: decorTitle("Park (Four-Leaf Clover)"),
     description:
-      "This Decor is an extremely rare variation of the regular Clover decor, which shows up more often on St. Patrick's day in Special Event Huge Seedlings.",
+      "An extremely rare variation of the regular Clover decor, more common often on St. Patrick's day.",
   }),
   createLocationDecor("library"),
   createLocationDecor("sushi"),
@@ -188,13 +187,13 @@ export const decors: Decor[] = [
     title: "Rainy Day",
     icon: "weather",
     colors: [PikminColor.Blue],
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [ CollectionView.Mitchell],
   }),
   createLocationDecor("weather-snowy-day", {
     title: "Snowy Day",
     icon: "snowy-day",
     colors: [PikminColor.Blue, PikminColor.White],
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [ CollectionView.Mitchell],
   }),
   createLocationDecor("themepark-1", {
     title: decorTitle("Theme Park"),
@@ -205,7 +204,7 @@ export const decors: Decor[] = [
     title: decorTitle("Theme Park (alternative design)"),
     icon: "themepark",
     colors: [PikminColor.Red, PikminColor.Yellow, PikminColor.Blue],
-    views: [CollectionView.Mitchell, CollectionView.Exhaustive],
+    views: [CollectionView.Mitchell],
   }),
   createLocationDecor("bus-stop"),
   createLocationDecor("italian-restaurant"),
@@ -227,31 +226,31 @@ export const decors: Decor[] = [
     title: "Appliances Store: Battery 2",
     icon: "appliances-store",
     colors: [PikminColor.Yellow],
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [ CollectionView.Mitchell],
   }),
   createLocationDecor("appliances-store-battery-3", {
     title: "Appliances Store: Battery 3",
     icon: "appliances-store",
     colors: [PikminColor.Yellow],
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [ CollectionView.Mitchell],
   }),
   createLocationDecor("appliances-store-battery-4", {
     title: "Appliances Store: Battery 4",
     icon: "appliances-store",
     colors: [PikminColor.Yellow],
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [ CollectionView.Mitchell],
   }),
   createLocationDecor("appliances-store-battery-5", {
     title: "Appliances Store: Battery 5",
     icon: "appliances-store",
     colors: [PikminColor.Yellow],
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [ CollectionView.Mitchell],
   }),
   createLocationDecor("appliances-store-battery-6", {
     title: "Appliances Store: Battery 6",
     icon: "appliances-store",
     colors: [PikminColor.Yellow],
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [ CollectionView.Mitchell],
   }),
   createLocationDecor("appliances-store-fairy-lights-1", {
     title: "Appliances Store: Fairy Lights",
@@ -262,14 +261,14 @@ export const decors: Decor[] = [
     title: "Appliances Store: Fairy Lights 2",
     icon: "appliances-store",
     colors: [PikminColor.Yellow],
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [ CollectionView.Mitchell],
   }),
   createLocationDecor("curry", {
     title: "Curry",
     icon: "curry",
     colors,
     description: "Indian Resturant Pikmin",
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [ CollectionView.Mitchell],
   }),
   // Special Decor Pikmin which are custom in every aspect.
   {
@@ -277,7 +276,7 @@ export const decors: Decor[] = [
     colors: [PikminColor.Blue],
     title: "Mario",
     description:
-      "This Decor Pikmin wears a replica of Mario's signature red cap. A Huge Seedling for this Pikmin can be obtained when the player links their Nintendo Account to the app.",
+      "This Decor Pikmin wears a replica of Mario's signature red cap.",
     type: DecorType.Special,
     views: allCollectionViews,
   },
@@ -304,7 +303,7 @@ export const decors: Decor[] = [
     colors,
     title: "Chess Piece (Black)",
     description:
-      "To celebrate the International Chess Day on July 20th, a special Decor Pikmin was made obtainable from July 18th until July 31st, 2022. They will be available in the future again.",
+      "To celebrate the International Chess Day, these Pikmin wear various black chess piece keychains.",
     type: DecorType.Special,
     views: allCollectionViews,
   },
@@ -313,7 +312,7 @@ export const decors: Decor[] = [
     colors,
     title: "Chess Piece (White)",
     description:
-      "Chess Day 2023. In this event, the time when you collect the gold seedlings influences the chess piece color your Pikmin will wear. Colors rotate weekly.",
+      "To celebrate the International Chess Day, these Pikmin wear various white chess piece keychains.",
     type: DecorType.Special,
     views: allCollectionViews,
   },
@@ -354,7 +353,7 @@ export const decors: Decor[] = [
     description:
       "2023 Design #2.",
     type: DecorType.Special,
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [ CollectionView.Mitchell],
   },
   {
     key: "special-flower-card-2023-3",
@@ -369,7 +368,7 @@ export const decors: Decor[] = [
     description:
       "2023 Design #3.",
     type: DecorType.Special,
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [ CollectionView.Mitchell],
   },
   {
     key: "special-flower-card-2023-4",
@@ -384,7 +383,7 @@ export const decors: Decor[] = [
     description:
       "2023 Design #4.",
     type: DecorType.Special,
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [ CollectionView.Mitchell],
   },
   {
     key: "special-flower-card-2023-5",
@@ -399,7 +398,7 @@ export const decors: Decor[] = [
     description:
       "2023 Design #5.",
     type: DecorType.Special,
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [ CollectionView.Mitchell],
   },
   {
     key: "special-flower-card-2023-6",
@@ -414,7 +413,7 @@ export const decors: Decor[] = [
     description:
       "2023 Design #6.",
     type: DecorType.Special,
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [ CollectionView.Mitchell],
   },
   {
     key: "special-flower-card-2024-1",
@@ -424,7 +423,7 @@ export const decors: Decor[] = [
     description:
       "2024 Design #1.",
     type: DecorType.Special,
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [ CollectionView.Mitchell],
   },
   {
     key: "special-flower-card-2024-2",
@@ -434,7 +433,7 @@ export const decors: Decor[] = [
     description:
       "2024 Design #2.",
     type: DecorType.Special,
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [ CollectionView.Mitchell],
   },
   {
     key: "special-halloween",
@@ -475,7 +474,7 @@ export const decors: Decor[] = [
     colors: [PikminColor.Blue, PikminColor.Yellow, PikminColor.Red],
     title: "Koppaite Space Suit",
     description:
-      "From November 28th to December 9th, 2022, there was an event themed around Pikmin 3 Deluxe, where 3 types of Decor Pikmin could be obtained by completing flower planting missions.",
+      "Themed around Pikmin 3 Deluxe, 3 types of Decor Pikmin could be obtained by completing flower planting missions.",
     type: DecorType.Special,
     views: allCollectionViews,
   },
@@ -484,7 +483,7 @@ export const decors: Decor[] = [
     colors,
     title: "2023 glasses",
     description:
-      "From December 26th, 2022 to January 15th, 2023, for the 2023 New Year event, a new type of Decor Pikmin was obtainable for 3 weeks. These Decor Pikmin wear appropriately sized New Year's glasses on their heads.",
+      "For the 2023 New Year event, these Decor Pikmin wear appropriately sized New Year's glasses on their heads.",
     type: DecorType.Special,
     views: allCollectionViews,
   },
@@ -536,7 +535,7 @@ export const decors: Decor[] = [
     colors,
     title: "Easter Egg",
     description:
-      "For the Easter event, a new set of Decor Pikmin were obtainable. Those Decor Pikmin wore colored egg shells in celebration of Easter.",
+      "For the Easter event, these Decor Pikmin wore colored egg shells.",
     type: DecorType.Special,
     views: allCollectionViews,
   },
@@ -555,7 +554,7 @@ export const decors: Decor[] = [
     colors,
     title: "Sneaker Keychain",
     description:
-      "May 8th 2023 to May 31st 2023. Gold seedlings from event challenges and referral codes reward players with Sneaker Keychain decor Pikmin.",
+      "Gold seedlings from event challenges and referral codes reward players with Sneaker Keychain decor Pikmin.",
     type: DecorType.Special,
     views: allCollectionViews,
   },
@@ -572,7 +571,7 @@ export const decors: Decor[] = [
     colors,
     title: "Mahjong (1st variant)",
     description:
-      "August 14th 2023 to September 10th 2023. Complete Event Challenge missions to obtain gold seedlings for Mahjong Tile Decor Pikmin.",
+      "Complete Event Challenge missions to obtain gold seedlings for Mahjong Tile Decor Pikmin.",
     type: DecorType.Special,
     views: allCollectionViews,
   },
@@ -581,7 +580,7 @@ export const decors: Decor[] = [
     colors,
     title: "Mahjong (2nd variant)",
     description:
-      "August 14th 2023 to September 10th 2023. Complete Event Challenge missions to obtain gold seedlings for Mahjong Tile Decor Pikmin.",
+      "Complete Event Challenge missions to obtain gold seedlings for Mahjong Tile Decor Pikmin.",
     type: DecorType.Special,
     views: allCollectionViews,
   },
@@ -619,7 +618,7 @@ export const decors: Decor[] = [
     title: "Fortune (Very Lucky)",
     description: "Exclusive to Japan",
     type: DecorType.Special,
-    views: [CollectionView.Exhaustive, CollectionView.Mitchell],
+    views: [ CollectionView.Mitchell],
   },
   {
     key: "special-fortune-2",
@@ -663,18 +662,18 @@ export const decors: Decor[] = [
     colors,
     title: "Holiday Sticker",
     description:
-      "Any Roadside-type Pikmin grown from a seedling that was discovered between December 21st, 2021 to January 11th, 2022 will instead have a Holidays-themed sticker. These stickers are bigger than the regular sticker, with each Pikmin type having a different design.",
+      "Any Roadside-type Pikmin discovered between December 21st, 2021 to January 11th have a Holidays-themed sticker.",
     type: DecorType.Special,
-    views: [CollectionView.Mitchell, CollectionView.Exhaustive],
+    views: [CollectionView.Mitchell],
   },
   {
     key: "special-roadside-coin",
     colors,
     title: "Roadside Coin",
     description:
-      "These Pikmin only have 1 type per Pikmin, unlike the sticker type, and the coins present on the Pikmin are from all around the world.",
+      "These Pikmin have coins from all around the world.",
     type: DecorType.Special,
-    views: [CollectionView.Mitchell, CollectionView.Exhaustive],
+    views: [CollectionView.Mitchell],
   },
 
   // Roadside decors for display in Mitchell view only
