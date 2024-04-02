@@ -29,7 +29,7 @@ const ViewRadioButton: React.FC<RadioProps> = ({
 
 const descriptions: Record<CollectionView, string> = {
   [CollectionView.Mitchell]:
-    "Track all the decors which the Pikmin Bloom game tracks, plus roadside stickers, with the Mitchell view.",
+    "Track all the decors which the Pikmin Bloom game tracks, plus roadside stickers.",
   };
 
 export const TopToolbar: React.FC = () => {
